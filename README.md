@@ -26,3 +26,33 @@ Navigate to the source code directory (`src`) and run the `javac` command:
 ```bash
 cd src
 javac Game_Program.java GuessingGame.java
+
+Execution
+Once compiled, run the main program from the src directory:
+
+java Game_Program
+
+Running the Tests
+This project includes a suite of JUnit tests to verify the functionality of the GuessingGame class.
+
+Prerequisites
+JUnit 4 library (.jar file) must be in your classpath.
+
+Compilation
+Compile the test files along with the source files:
+
+# Make sure you are in the src directory
+# For macOS/Linux
+javac -cp ".:/path/to/junit-4.13.2.jar:/path/to/hamcrest-core-1.3.jar" *.java
+
+# For Windows
+javac -cp ".;C:\\path\\to\\junit-4.13.2.jar;C:\\path\\to\\hamcrest-core-1.3.jar" *.java
+
+Execution
+Run the test suite:
+
+# For macOS/Linux
+java -cp ".:/path/to/junit-4.13.2.jar:/path/to/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore AllTests
+
+# For Windows
+java -cp ".;C:\\path\\to\\junit-4.13.2.jar;C:\\path\\to\\hamcrest-core-1.3.jar" org.junit.runner.JUnitCore AllTests
